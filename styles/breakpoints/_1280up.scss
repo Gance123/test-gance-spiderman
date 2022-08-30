@@ -1,0 +1,197 @@
+.header {
+  height: 150px;
+  &__content {
+    border-bottom: none;
+  }
+  &__hr {
+    visibility: visible;
+  }
+}
+.slider1 {
+  & .swiper-slide {
+    & .marvel-logo {
+      top: 35%;
+      height: 50px;
+      width: 180px;
+    }
+    & p {
+      top: 55%;
+    }
+  }
+}
+.slider1 {
+  & .swiper-slide.inview {
+    & .spider-title h1 {
+      top: 50%;
+      @include animation($name: kf-animate-focus0, $duration: 0.8s, $delay: 2s);
+    }
+  }
+}
+
+.story {
+  &__inner {
+    justify-content: center;
+  }
+  &__rightside {
+    & > img {      top: 0;
+      left: 10%;
+    }
+  }
+  &__leftside {
+    padding-left: 200px;
+    & > h2 {
+      font-size: 3rem;
+      letter-spacing: -4px;
+    }
+    & > h3 {
+      font-size: 1.3rem;
+      &::after {
+        left: 50%;
+        width: 120%;
+      }
+    }
+    & > p {
+      font-size: .9rem;
+    }
+  }
+}
+
+
+.Avengers {
+  height: 60vh;
+  &__inner {
+    flex-direction: row;
+    justify-content: center;
+  }
+  &__bg {
+    flex-basis: 71%;
+    position: relative;
+    height: 100%;
+    margin-left: 100px;
+    & > img {
+      object-fit: contain;
+      right: 50px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 30%;
+      top: 0;
+      right: 0;
+      border-bottom: 730px solid $cBack;
+      border-left: 150px solid transparent;
+      z-index: 1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      border-bottom: 730px solid transparent;
+      border-left: 150px solid $cBack;
+      z-index: 1;
+    }
+  }
+  &__explanation {
+    font-size: 1rem;
+    flex-basis: 60%;
+    text-shadow: 5px 5px 5px $cBlack;
+    width: 600px;
+    padding-right: 100px;
+  }
+}
+.tomholand {
+  height: 50vh;
+  &__inner {
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+  }
+  &__bg {
+    & > img {
+      object-fit: contain;
+      right: 170px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 33%;
+      top: 0;
+      right: 0;
+      border-bottom: 600px solid $cBack;
+      border-left: 70px solid transparent;
+      z-index: 1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 20%;
+      top: 0;
+      left: 0;
+      border-bottom: 690px solid transparent;
+      border-left: 120px solid $cBack;
+      z-index: 1;
+    }
+  }
+  &__explanation {
+    font-size: 1rem;
+    flex-basis: 50%;
+    width: 600px;
+    opacity: 0;
+    padding-left: 200px;
+  }
+}
+.guruto {
+  height: 60vh;
+  &__inner {
+    flex-direction: row;
+    justify-content: center;
+  }
+  &__bg {
+    margin-left: 100px;
+    & > img {
+      object-fit: contain;
+      right: 50px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 30%;
+      top: 0;
+      right: 0;
+      border-bottom: 900px solid $cBack;
+      border-left: 170px solid transparent;
+      z-index: 1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      border-bottom: 800px solid transparent;
+      border-left: 190px solid $cBack;
+      z-index: 1;
+    }
+  }
+  &__explanation {
+    flex-basis: 60%;
+    font-size: 1rem;
+    padding-right: 200px;
+  }
+}
+
+.slider2 {
+  & .swiper-slide {
+    flex-basis: 18%;
+    height: 500px;
+    margin: 30px 20px;
+  }
+}

@@ -1,0 +1,167 @@
+.content-width {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1070px;
+}
+
+
+.header {
+  height: 120px;
+  display: block;
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 3px solid $cBorder;
+
+  }
+  &__nav {
+    display: block;
+    font-size: 1rem;
+  }
+  &__li {
+    margin-left: 40px;
+  }
+  &__btn {
+    font-size: .8rem;
+  }
+  &__nav2{
+    display: block;
+  }
+  &__ul2 {
+    height: 30px;
+    font-size: .8rem;
+  }
+  & .mobile-menu__btn{
+    display: none;
+  }
+}
+
+.slider1 {
+  & .swiper-slide {
+    height: 600px;
+    margin-top: 120px;
+    & .spider-title h1 {
+      font-size: 4rem;
+    }
+    & .marvel-logo{
+      height: 30px;
+      width: 120px;
+      top: 38%;
+    }
+    & p {
+      font-size: 1.3rem;
+    }
+  }
+}
+.slider1 {
+  .swiper-slide.inview {
+    & > .spider-title h1 {
+      @include animation($name: kf-animate-focus, $duration: 0.8s, $delay: 2s);
+    }
+  }
+}
+.story {
+  background-color: $cWhite;
+  &__inner {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+  }
+  &__rightside {
+    flex-basis: 50%;
+    position: relative;
+    height: 50vh;
+    & > img {
+      position: absolute;
+      top: 0;
+      left: -60%;
+    }
+  }
+  &__leftside {
+    color: $cBack;
+    text-shadow: none;
+    flex-basis: 40%;
+    position: relative;
+    z-index: 10;
+    top: 0;
+    transform: none;
+    background-color: transparent;
+    & > h2 {
+      font-size: 2rem;
+      letter-spacing: -.2rem;
+    }
+    & > h3 {
+      font-size: 1rem;
+      position: relative;
+      &::after {
+        content: "";
+        background-color: rgb(192, 192, 0);
+        position: absolute;
+        top: 50%;
+        left: 47%;
+        width: 70%;
+        height: 1.5px;
+      }
+    }
+    & > p {
+      font-size: .8rem;
+    }
+  }
+}
+  
+.Avengers {
+  height: 50vh;
+  &__bg {
+    width: 50%;
+  }
+  &__explanation {
+    text-align: center;
+    flex-basis: 50%;
+    width: 50%;
+    margin-top: 20px;
+  }
+}
+.tomholand {
+  &__bg {
+    flex-basis: 50%;
+    width: 50%;
+    & > img {
+      object-fit: cover;
+    }
+  }
+  &__explanation {
+    text-align: center;
+    flex-basis: 50%;
+    width: 50%;
+    margin-top: 20px;
+  }
+}
+.guruto {
+  margin-top: 60px;
+  &__bg {
+    width: 50%;
+    & > img {
+      object-fit: cover;
+    }
+  }
+  &__explanation {
+    text-align: center;
+    flex-basis: 50%;
+    width: 50%;
+    margin-top: 20px;
+  }
+}
+.slider2 {
+  & .swiper-slide{
+    height: 440px;
+    margin: 30px 20px ;
+    box-shadow: 0px 0px 20px 3px $cBlack;
+    & img {
+      object-fit: cover;
+    }
+  }
+}

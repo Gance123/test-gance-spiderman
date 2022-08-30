@@ -1,0 +1,370 @@
+@-webkit-keyframes bound {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: translateY(-7px);
+  }
+  50% {
+    transform: none;
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes bound {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: translateY(-7px);
+  }
+  50% {
+    transform: none;
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-webkit-keyframes bound2 {
+  0% {
+    transform: translateX(50%);
+  }
+  25% {
+    transform: translateX(50%) translateY(-15px);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  75% {
+    transform: translateX(50%) translateY(-10px);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+@keyframes bound2 {
+  0% {
+    transform: translateX(50%);
+  }
+  25% {
+    transform: translateX(50%) translateY(-15px);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  75% {
+    transform: translateX(50%) translateY(-10px);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+@-webkit-keyframes expand {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateY(-5%);
+  }
+}
+@keyframes expand {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateY(-5%);
+  }
+}
+@-webkit-keyframes kf-animate-focus {
+  0% {
+    opacity: 0;
+    font-size: 10rem;
+    letter-spacing: 2rem;
+    text-indent: 2rem;
+  }
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: -0.5rem;
+    text-indent: -0.5rem;
+    font-size: 5rem;
+  }
+}
+@keyframes kf-animate-focus {
+  0% {
+    opacity: 0;
+    font-size: 10rem;
+    letter-spacing: 2rem;
+    text-indent: 2rem;
+  }
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: -0.5rem;
+    text-indent: -0.5rem;
+    font-size: 5rem;
+  }
+}
+@-webkit-keyframes kf-animate-focus0 {
+  0% {
+    opacity: 0;
+    font-size: 10rem;
+    letter-spacing: 2rem;
+    text-indent: 2rem;
+  }
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: -0.5rem;
+    text-indent: -0.5rem;
+    font-size: 7rem;
+  }
+}
+@keyframes kf-animate-focus0 {
+  0% {
+    opacity: 0;
+    font-size: 10rem;
+    letter-spacing: 2rem;
+    text-indent: 2rem;
+  }
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: -0.5rem;
+    text-indent: -0.5rem;
+    font-size: 7rem;
+  }
+}
+@-webkit-keyframes kf-animate-focus-mobile {
+  0% {
+    opacity: 0;
+    font-size: 5rem;
+    letter-spacing: 2rem;
+    text-indent: 2rem;
+  }
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    font-size: 2rem;
+    letter-spacing: -0.2rem;
+    text-indent: -0.2rem;
+  }
+}
+@keyframes kf-animate-focus-mobile {
+  0% {
+    opacity: 0;
+    font-size: 5rem;
+    letter-spacing: 2rem;
+    text-indent: 2rem;
+  }
+  20% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    font-size: 2rem;
+    letter-spacing: -0.2rem;
+    text-indent: -0.2rem;
+  }
+}
+@-webkit-keyframes kf-animate-focus2 {
+  0% {
+    transform: translateX(-50%) scale(10);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%) scale(1.3);
+    opacity: 1;
+  }
+}
+@keyframes kf-animate-focus2 {
+  0% {
+    transform: translateX(-50%) scale(10);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%) scale(1.3);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes kf-animate-focus3 {
+  0% {
+    transform: translateX(-50%) scale(10) rotate(180deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%) scale(1) rotate(-1deg);
+    opacity: 1;
+  }
+}
+@keyframes kf-animate-focus3 {
+  0% {
+    transform: translateX(-50%) scale(10) rotate(180deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%) scale(1) rotate(-1deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translate(-80%);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translate(-80%);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-webkit-keyframes slide2 {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slide2 {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.pace-done #global-container {
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+#global-container {
+  opacity: 0;
+}
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  z-index: 2000;
+  position: fixed;
+  margin: auto;
+  top: 12px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  height: 50px;
+  opacity: 0.6;
+}
+
+.pace-progress-inner {
+  transform: translateX(50%);
+  height: 100px;
+  width: 100px;
+  background-image: url("../images/spiderlogo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  -webkit-animation-name: bound2;
+          animation-name: bound2;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.pace .pace-progress {
+  transform: none !important;
+  text-align: center;
+}
+
+.pace .pace-progress:after {
+  content: attr(data-progress-text);
+  color: aliceblue;
+  font-weight: 100;
+  font-size: 2em;
+}
+
+.pace.pace-inactive {
+  display: none;
+}/*# sourceMappingURL=loading-bar.css.map */

@@ -1,0 +1,77 @@
+@import "modules/mixin";
+@import "modules/keyframe";
+
+.pace-done #global-container {
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+#global-container {
+  opacity: 0;
+}
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+
+  z-index: 2000;
+  position: fixed;
+  margin: auto;
+  top: 12px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  height: 50px;
+	opacity: .6;
+}
+
+.pace-progress-inner {
+  transform: translateX(50%);
+  height: 100px;
+  width: 100px;
+  background-image: url("../images/spiderlogo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+	opacity: .6;
+  @include animation(
+    $name: bound2,
+    $iteration-count: infinite,
+    $duration: 1.3s,
+    $delay: -2s
+  );
+}
+
+.pace .pace-progress {
+  transform: none !important;
+  text-align: center;
+}
+
+.pace .pace-progress:after {
+  content: attr(data-progress-text);
+  color: aliceblue;
+  font-weight: 100;
+  font-size: 2em;
+}
+
+.pace.pace-inactive {
+  display: none;
+}

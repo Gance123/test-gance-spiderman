@@ -1,0 +1,523 @@
+.content-width {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1070px;
+}
+body{
+  background-color: $cBack;
+}
+
+hr{
+  background-color: $cBorder;
+  height: 5px;
+  margin: 0;
+}
+#container {
+  transition: all .5s;
+}
+.main-title {
+  font-size: 1.2rem;
+}
+.sub-title {
+  font-size: .7rem;
+}
+
+.header {
+  background-color: $cBack;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 80px;
+  border-bottom: 3px solid $cBorder;
+  &.triggered {
+    background-color: rgba(32, 32, 32, 0.7);
+    box-shadow: 0px 5px 20px 1px $cBlack;
+  }
+  &__content {
+    @extend .content-width;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__hr {
+    visibility: hidden;
+  }
+  &__nav {
+    display: none;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+  &__ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  &__li {
+    list-style: none;
+    margin-left: 150px;
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+    & > a {
+      text-decoration: none;
+      color: aliceblue;
+      text-shadow: 3px 3px 1px #0000007c;
+      transition: all 0.6s;
+      &:hover {
+        color: rgb(227, 241, 20);
+      }
+    }
+  }
+  &__logo {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    & > a {
+      border-radius: 50%;
+      &:hover img {
+        box-shadow: 0px 0px 5px $cBlack;
+        @include animation($name: bound, $duration: 0.7s);
+      }
+    }
+  }
+  &__btn {
+    font-size: .5rem;
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    transition: all 0.2s;
+    text-shadow: 1px 1px $cBorder;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: $cWhite;
+    opacity: 1;
+    margin-left: 15px;
+    height: 40px;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: $cBlack;
+      text-shadow: none;
+    }
+  }
+  &__image {
+    height: 3em;
+    border-radius: 50%;
+    transition: all 0.5s;
+    box-shadow: 0px 0px 5px $cBlack;
+  }
+  &__nav2{
+    display: none;
+  }
+  &__ul2 {
+    display: none;
+    @extend.content-width;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: aliceblue;
+    margin-bottom: 0;
+  }
+  &__li2 {
+    list-style: none;
+    text-transform: uppercase;
+    & > a {
+      text-decoration: none;
+      color: aliceblue;
+      font-weight: bold;
+    }
+  }
+}
+
+
+.slider1 {
+  & .swiper-slide {
+    height: 300px;
+    margin-top: 80px;
+    overflow: hidden;
+    & .spider-title h1 {
+      font-size: 2rem;
+      font-style: italic;
+      color: aliceblue;
+      white-space: nowrap;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-shadow: 3px 0px 0px #ee0202, 0px 0px 20px $cBlack;
+      padding: 0 40px 0 20px;
+      opacity: 0;
+    }
+    & .marvel-logo {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 20px;
+      width: 80px;
+      opacity: 1;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding-right: 3.5px;
+      box-shadow: 0 0 10px 3px $cBlack;
+      opacity: 0;
+    }
+    & p {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: "Homemade Apple", cursive;
+      color: $cBlack;
+      font-weight: normal;
+      font-size: .5rem;
+      text-shadow: 1px 1px 3px $cWhite;
+      transform: rotate(-3deg);
+      opacity: 0;
+    }
+    &.brown {
+      background-image: url("../images/background02.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &.yellow {
+      background-image: url("../images/background02.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      & .spider-title h1 {
+        text-shadow: 8px 0px 0px rgb(218, 141, 0);
+      }
+    }
+    &.blue {
+      background-image: url("../images/background02.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      & .spider-title h1 {
+        text-shadow: 8px 0px 0px rgb(1, 12, 105);
+      }
+    }
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.05);
+      transition: all 1s;
+      position: relative;
+      opacity: 0.85;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(116, 107, 107, 0.2);
+    }
+    &-active {
+      & > img {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+}
+.slider1 {
+  .swiper-slide.inview {
+    & .marvel-logo {
+      @include animation($name: kf-animate-focus2, $duration: 2s);
+    }
+    & p {
+      @include animation(
+        $name: kf-animate-focus3,
+        $duration: 0.5s,
+        $delay: 3.3s
+      );
+    }
+    & > .spider-title h1 {
+      @include animation($name: kf-animate-focus-mobile, $duration: 0.8s, $delay: 2s);
+    }
+  }
+}
+
+.slider2 {
+  background-color: $cWhite;
+  & .swiper-slide {
+    height: 340px;
+    &:hover {
+      @include animation($name: expand, $duration: 0.5s);
+    }
+  }
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+.swiper-pagination-bullet-active {
+  background: $cWhite;
+}
+
+.story {
+  &__inner {
+    position: relative;
+    height: 50vh;
+    background-color: $cWhite;
+  }
+  &__rightside {
+    position: absolute;
+    right: 1px;
+    height: 100%;
+    width: 500px;
+    overflow: hidden;
+    & > img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__leftside {
+    color: azure;
+    text-shadow: 0 3px 2px $cBlack;
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 2%;
+    transform: translateY(23%);
+    background-color: rgba(0, 0, 0, 0.3);
+    & > h2 {
+      font-size: 1.3rem;
+    }
+    & > h3 {
+      font-size: .9rem;
+      
+    }
+    & > p {
+      font-size: .7rem;
+    }
+  }
+  &__header.inview {
+    &::after {
+      @include animation($name: slide, $duration: 0.65s);
+    }
+  }
+}
+
+.Avengers {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  height: 50vh;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  &__bg {
+    width: 90%;
+    flex-basis: 71%;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    & > img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    
+  }
+  &__explanation {
+    margin-top: 20px;
+    font-size: .75rem;
+    flex-basis: 70%;
+    color: aliceblue;
+    text-shadow: 5px 5px 5px $cBlack;
+    width: 80%;
+    overflow: hidden;
+    opacity: 0;
+    & .num {
+      color: rgb(216, 216, 4);
+    }
+    &.inview {
+      @include animation($name: slide2);
+    }
+  }
+}
+.tomholand {
+  height: 50vh;
+  margin-top: 60px;
+  &__inner {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  &__bg {
+    width: 90%;
+    flex-basis: 71%;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    & > img {
+      position: absolute;
+      height: 100%;
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+  &__explanation {
+    font-size: .75rem;
+    flex-basis: 80%;
+    color: aliceblue;
+    text-shadow: 5px 5px 5px $cBlack;
+    width: 80%;
+    overflow: hidden;
+    opacity: 0;
+    & .num {
+      color: rgb(216, 216, 4);
+    }
+    &.inview {
+      @include animation($name: slide2);
+    }
+  }
+}
+.guruto {
+  height: 50vh;
+  margin-bottom: 40px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  &__bg {
+    width: 90%;
+    flex-basis: 71%;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    & > img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__explanation {
+    margin-top: 20px;
+    font-size: .75rem;
+    flex-basis: 60%;
+    color: aliceblue;
+    text-shadow: 5px 5px 5px $cBlack;
+    width: 80%;
+    overflow: hidden;
+    opacity: 0;
+    & .num {
+      color: rgb(216, 216, 4);
+    }
+    &.inview {
+      @include animation($name: slide2);
+    }
+  }
+}
+
+
+.footer {
+  &__content {
+    @extend .content-width;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.9;
+    text-align: center;
+  }
+  &__logo {
+    flex-basis: 5%;
+    height: 100px;
+    & > a {
+      display: block;
+      height: 100%;
+      &:hover {
+        @include animation($name: expand, $duration: 0.2s);
+      }
+    }
+  }
+  &__image {
+    object-fit: cover;
+    height: 100%;
+  }
+  &__nav {
+    flex-basis: 10%;
+  }
+  &__sns {
+    flex-basis: 20%;
+  }
+  &__ul {
+    margin: 0;
+    padding: 0;
+    // text-align: center;
+  }
+  &__li {
+    list-style: none;
+    margin-bottom: 10px;
+    & > a {
+      color: aliceblue;
+      text-decoration: none;
+      text-shadow: 5px 5px 5px $cBlack;
+    }
+  }
+  & .icon {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      width: 1em;
+      height: 1em;
+      transform: translateY(-50%);
+      background-size: contain;
+      background-position: center;
+      opacity: 0.8;
+    }
+    &.twitter {
+      &::before {
+        background-image: url("../images/twitter.png");
+      }
+    }
+    &.fb {
+      &::before {
+        background-image: url("../images/facebook.png");
+      }
+    }
+    &.line {
+      &::before {
+        background-image: url("../images/line.png");
+      }
+    }
+    &.mail {
+      &::before {
+        background-image: url("../images/email.png");
+        opacity: 1;
+      }
+    }
+  }
+  &__cr {
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: .5;
+  }
+}
